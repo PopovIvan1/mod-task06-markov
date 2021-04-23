@@ -4,6 +4,7 @@ using namespace std;
 
 Gen::Gen(string arr, int val1, int val2)
 {
+    srand(4561);
     NPREF = val1;
     MAXGEN = val2;
     data = arr;
