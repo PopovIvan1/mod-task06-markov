@@ -27,11 +27,7 @@ TEST(task1, test4) {
   ASSERT_STRNE("123 567 888", result);
 }
 TEST(task1, test5) {
-  map<deque<string>, vector<string> > str;
-  str[{"123", "567"}].push_back("234");
-  str[{"123", "567"}].push_back("000");
-  str[{"123", "567"}].push_back("888");
-  Gen gn = Gen(str, { "123","567","234", "000", "888" }, 2, 1000);
+  Gen gn = Gen("aa bb cc dd aa bb", 2, 20);
   string result = gn.getText();
-  ASSERT_STRNE("123 567 888", result);
+  ASSERT_STRNE("aa bb cc dd aa bb cc", result);
 }
