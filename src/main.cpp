@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    /*string line;
+    string line;
     string text="";
     ifstream in("tst.txt"); 
     if (in.is_open())
@@ -24,5 +24,5 @@ int main()
     {
         out << answer;
     }
-    out.close();*/
+    out.close();
 }
