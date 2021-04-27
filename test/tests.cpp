@@ -5,14 +5,14 @@ TEST(task1, test1) {
   string result = gn.getText();
   char* ch=new char[result.size()+1];
   strcpy(ch,result.c_str());
-  ASSERT_STRNE("123 234 567 1234", ch);
+  ASSERT_STREQ("123 234 567 1234", ch);
 }
 TEST(task1, test2) {
   Gen gn = Gen("123 234", 1, 1000);
   string result = gn.getText();
   char* ch=new char[result.size()+1];
   strcpy(ch,result.c_str());
-  ASSERT_STRNE("123 234", ch);
+  ASSERT_STREQ("123 234", ch);
 }
 TEST(task1, test3) {
   map<deque<string>, vector<string> > str;
@@ -21,7 +21,7 @@ TEST(task1, test3) {
   string result = gn.getText();
   char* ch=new char[result.size()+1];
   strcpy(ch,result.c_str());
-  ASSERT_STRNE("123 567 234", ch);
+  ASSERT_STREQ("123 567 234", ch);
 }
 TEST(task1, test4) {
   map<deque<string>, vector<string> > str;
@@ -32,12 +32,12 @@ TEST(task1, test4) {
   string result = gn.getText();
   char* ch=new char[result.size()+1];
   strcpy(ch,result.c_str());
-  ASSERT_STRNE("123 567 888", ch);
+  ASSERT_STREQ("123 567 888", ch);
 }
 TEST(task1, test5) {
   Gen gn = Gen("aa bb cc dd aa bb", 2, 20);
   string result = gn.getText();
   char* ch=new char[result.size()+1];
   strcpy(ch,result.c_str());
-  ASSERT_STRNE("aa bb cc dd aa bb cc", ch);
+  ASSERT_STREQ("aa bb cc dd aa bb cc", ch);
 }
