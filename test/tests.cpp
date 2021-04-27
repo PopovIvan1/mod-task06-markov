@@ -3,19 +3,25 @@
 TEST(task1, test1) {
   Gen gn = Gen("123 234 567 1234", 3, 1000);
   string result = gn.getText();
-  ASSERT_STRNE("123 234 567 1234", result);
+  char* ch=new char[result.size()+1];
+  strcpy(ch,result.c_str());
+  ASSERT_STRNE("123 234 567 1234", ch);
 }
 TEST(task1, test2) {
   Gen gn = Gen("123 234", 1, 1000);
   string result = gn.getText();
-  ASSERT_STRNE("123 234", result);
+  char* ch=new char[result.size()+1];
+  strcpy(ch,result.c_str());
+  ASSERT_STRNE("123 234", ch);
 }
 TEST(task1, test3) {
   map<deque<string>, vector<string> > str;
   str[{"123", "567"}].push_back("234");
   Gen gn = Gen(str, { "123","567","234" }, 2, 1000);
   string result = gn.getText();
-  ASSERT_STRNE("123 567 234", result);
+  char* ch=new char[result.size()+1];
+  strcpy(ch,result.c_str());
+  ASSERT_STRNE("123 567 234", ch);
 }
 TEST(task1, test4) {
   map<deque<string>, vector<string> > str;
@@ -24,10 +30,14 @@ TEST(task1, test4) {
   str[{"123", "567"}].push_back("888");
   Gen gn = Gen(str, { "123","567","234", "000", "888" }, 2, 1000);
   string result = gn.getText();
-  ASSERT_STRNE("123 567 888", result);
+  char* ch=new char[result.size()+1];
+  strcpy(ch,result.c_str());
+  ASSERT_STRNE("123 567 888", ch);
 }
 TEST(task1, test5) {
   Gen gn = Gen("aa bb cc dd aa bb", 2, 20);
   string result = gn.getText();
-  ASSERT_STRNE("aa bb cc dd aa bb cc", result);
+  char* ch=new char[result.size()+1];
+  strcpy(ch,result.c_str());
+  ASSERT_STRNE("aa bb cc dd aa bb cc", ch);
 }
