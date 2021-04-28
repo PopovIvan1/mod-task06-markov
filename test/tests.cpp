@@ -32,7 +32,7 @@ TEST(task1, test4) {
   string result = gn.getText();
   char* ch=new char[result.size()+1];
   strcpy(ch,result.c_str());
-  ASSERT_STREQ("123 567 888 ", ch);
+  ASSERT_STREQ("123 567 234 ", ch);
 }
 TEST(task1, test5) {
   Gen gn = Gen("aa bb cc dd aa bb", 2, 20);
